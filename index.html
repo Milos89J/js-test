@@ -10,14 +10,34 @@
     </h1>
    <input type="text" id="input-el">
    <button id="input-btn">Save</button>
+   <button id="delete-el">Delete</button>
    <div id="container"></div>
 
     <script>
 const names = "Milos"
 const sender = "Kira07"
+let one = []
+const deleteEl = document.getElementById("delete-el")
+
+deleteEl.addEventListener("click", function() {
+  console.log("double click")
+})
+
+
+
+const name = JSON.parse(localStorage.getItem("one"))
+
+if (name) {
+  one = name 
+  console.log(name)
+}
 
 const email = `hey ${names}, how are...by ${sender}`
 console.log(email)
+
+
+
+
       
     
     </script>
