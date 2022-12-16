@@ -5,42 +5,34 @@
 </head>
 
 <body>
-    <h1>
-        JS
-    </h1>
-   <input type="text" id="input-el">
-   <button id="input-btn">Save</button>
-   <button id="delete-el">Delete</button>
-   <div id="container"></div>
+  <h1>
+    JS
+  </h1>
+  <input type="text" id="input-el">
+  <button id="input-btn">Save</button>
+  <button id="delete-el">Delete</button>
+  <div id="container"></div>
 
-    <script>
-const names = "Milos"
-const sender = "Kira07"
-let one = []
-const deleteEl = document.getElementById("delete-el")
+  <script>
+    const names = "test"
+    const sender = "Kira07"
+    let one = []
+    const deleteEl = document.getElementById("delete-el")
 
-deleteEl.addEventListener("click", function() {
-  console.log("double click")
-})
+    deleteEl.addEventListener("click", function () {
+      console.log("double click")
+    })
 
+    const name = JSON.parse(localStorage.getItem("one"))
 
+    if (name) {
+      one = name
+      console.log(name)
+    }
 
-const name = JSON.parse(localStorage.getItem("one"))
-
-if (name) {
-  one = name 
-  console.log(name)
-}
-
-const email = `hey ${names}, how are...by ${sender}`
-console.log(email)
-
-
-
-
-      
-    
-    </script>
+    const email = `hey ${names}, how are...by ${sender}`
+    console.log(email)
+  </script>
 </body>
 
 </html>
@@ -50,11 +42,13 @@ console.log(email)
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
   input {
-   padding: 10px;
-   width: 100%;
-   box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
+
   button {
     background-color: red;
     padding: 10px;
@@ -62,4 +56,3 @@ console.log(email)
 
   }
 </style>
-
